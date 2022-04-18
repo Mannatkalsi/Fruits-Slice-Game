@@ -52,8 +52,8 @@ html{
     padding: 11px;
     display: none;
 }
-/* Question Section */
-#question{
+/* Fruit Container Section */
+#fruitContainer{
     width: 650px;
     height: 400px;
     margin: 50px auto 10px auto;
@@ -66,6 +66,8 @@ html{
     text-align: center;
     font-family: cursive, sans-serif;
     color: black;
+    position: relative;
+    overflow: hidden;
 }
 /* Instruction Section */
 #instruction{
@@ -78,6 +80,7 @@ html{
     box-shadow: 0px 4px #5C4033;
     -moz-box-shadow: 0px 4px #5C4033;
     -webkit-box-shadow: 0px 4px #5C4033;
+    font-weight: bold;
 }
 
 /* Start/Reset Button Section */
@@ -129,4 +132,17 @@ html{
     left: 145px;
     z-index: 2;
     display: none;
+}
+
+/* Trial or Heart sytling */
+.trial{
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+}
+
+/* Fruits */
+.fruit{
+    display: none;
+    position: absolute;
 }
