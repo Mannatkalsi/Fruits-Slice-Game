@@ -7,7 +7,7 @@ var fruits = ['apple', 'mango', 'cherries', 'peach', 'kiwi', 'orange', 'pineappl
 
 $(function () {
     //Click on start/reset button
-    
+
     $("#startReset").click(function () {
         //Check if we are playing ?
         //Yes - we are playing
@@ -38,36 +38,36 @@ $(function () {
             startAction();
         }
     });
-    
-    
-    $("#fruit1").mouseover(function(){
+
+
+    $("#fruit1").mouseover(function () {
         score++;
         $("#scoreValue").html(score);//Update Score
-        
+
         //document.getElementById("sliceSound").play();//Play Sound
         $("#sliceSound")[0].play();//Play Sound and return array
-        
+
         //Stop Fruits going down 
         clearInterval(action);
-        
+
         //hide the fruits
         //Note: if we only use jquery it not gonna work so we need need to add jquery UI 
         $("#fruit1").hide("explode", 500);//Slice the fruit /explode fruits
-        
+
         //Send new fruit 
         setTimeout(startAction, 800);
     });
 
-//functions
+    //functions
 
-function addHearts() {
-    $("#trialLeft").empty();//Empty the trial box
-    for (i = 0; i < trialLeft; i++) {
-        $("#trialLeft").append('<img src="images/heart.png" class="trial">');
+    function addHearts() {
+        $("#trialLeft").empty();//Empty the trial box
+        for (i = 0; i < trialLeft; i++) {
+            $("#trialLeft").append('<img src="images/heart.png" class="trial">');
+        }
     }
-}
 
-//Start sending fruits
+    //Start sending fruits
     function startAction() {
 
         //1. Create/ generate a fruit
